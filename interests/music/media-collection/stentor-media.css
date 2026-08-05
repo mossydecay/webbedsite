@@ -1,0 +1,1042 @@
+:root {
+	--text: #deeeba;
+  --outline: #3e563e62;
+	--line: #92AD85;
+	--lighterline: #abc49f;
+	--darkerline: #79946d;
+	--accent: #8fbc8f;
+	--bg: #1F2F22;
+	--bgdarker: #1A2922;
+	--bglighter: #2d4531;
+	--fill: #3E563E;
+	--lighterfill: #567656;
+	--darkerfill: #314931;
+}
+
+@font-face {
+  font-family: Kalam; /* set name */
+  src: url(https://fonts.googleapis.com/css2?family=Kalam&display=swap); /* url of the font */
+  font-family: Dosis;
+  src: url(https://fonts.googleapis.com/css2?family=Dosis&display=swap);
+  font-family: K2D;
+  src: url(https://fonts.googleapis.com/css2?family=K2D&display=swap);
+}
+
+::selection {
+    background: var(--bg);
+    color: #f6ffdd;
+}
+
+
+body {
+	color: var(--text);
+	font-family: 'Open Sans', sans-serif;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	scrollbar-color: var(--text) var(--line) }
+
+
+*::-webkit-scrollbar { width: 20px; }
+*::-webkit-scrollbar-track { background: var(--line); }
+*::-webkit-scrollbar-thumb { background-color: var(--text); border: transparent; }
+
+img { max-width: 100% }
+
+nav {
+	float: left;
+	width: 15%;
+	height: 100lvh;
+	position: relative;
+	background-color: var(--bg);
+  background-image: url("/images/bg29 v3.gif");
+  background-blend-mode: overlay;
+}
+
+nav div {
+	height: fit-content;
+	width: fit-content;
+	position: absolute;
+	top: 50%;
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+	right: -1.5lvw;
+	text-align: right;
+}
+
+nav a {
+	display: block;
+	margin: 10px 0;
+	padding: 0;
+	font-size: 1.5em;
+  font-family: 'K2D', sans-serif;
+	text-decoration: none;
+	color:var(--text);
+	filter: drop-shadow(1px 1px 0 var(--outline))
+			drop-shadow(-1px 1px 0 var(--outline))
+			drop-shadow(0 -1px 0 var(--outline))
+			drop-shadow(1px 0 var(--outline));
+}
+
+nav a:hover, nav a:focus {
+	color: var(--accent) !important;
+	background-color: transparent !important;
+}
+
+main {
+	float:left;
+	width: 82%;
+	height: 100lvh;
+	padding: 1.5em;
+	overflow-y: scroll;
+	background-color: var(--bg);
+  background-image: url("/images/bg29 v3.gif");
+}
+
+.container { max-width: 1500px }
+
+
+
+.stripe {
+	float: left;
+	width: 3%;
+	height: 100lvh;
+	background-color: #020906;
+}
+
+header {
+	font-size: 2em;
+  font-family: 'Dosis', sans-serif;
+	margin-bottom: -1.3rem;
+	margin-top: -1.5rem;
+	color:var(--text);
+	filter: drop-shadow(1px 1px 0 var(--outline))
+			drop-shadow(-1px 1px 0 var(--outline))
+			drop-shadow(0 -1px 0 var(--outline))
+			drop-shadow(1px 0 var(--outline));
+}
+
+h2, h3, h4, h5, h6, table, cite, blockquote, img {
+  font-family: 'Dosis', sans-serif;
+  font-weight: normal;
+}
+
+details {
+  font-family: 'Dosis', sans-serif;
+}
+
+.lessMargin {
+	margin: 0 0;
+	margin-bottom: 0;
+}
+
+p {
+	margin: 0.5rem 0;
+  font-family: 'Dosis', sans-serif;
+}
+
+ul, ol, dl {
+	margin: 1rem 0 1rem 2rem;
+}
+
+ul ul, ol ol {
+	margin: 0 0 0 2rem;
+}
+
+ul {
+	list-style: disc inside url("images/sprout.gif");
+	margin-left: 1em;
+	padding: 0;
+}
+
+p, table {
+	font-size: 1.25rem;
+	line-height: 1.2em;
+}
+
+ul, ol, dl {
+	font-size: 1rem;
+	line-height: 1.5em;
+}
+
+a {
+	color: var(--accent);
+	padding: 2px;
+}
+
+
+p a:hover, b a:hover, a a:hover, li a:hover, li a:hover, .cardGroup a:hover, em a:hover, td a:hover  {
+	color: var(--fill) !important;
+	background-color: var(--accent) !important;
+	padding: 0px 2px 2px;
+  border-radius: 5px;
+}
+
+h3 a {
+	color: var(--text);
+	text-decoration: none;
+	font-family: 'K2D', sans-serif;
+}
+
+h3 a:hover {
+	color: var(--accent);
+}
+
+h6 { font-size: 1em; }
+h5 { font-size: 1.25em; }
+h4 { font-size: 1.5em; }
+h3 { font-size: 0.85em; }
+h2 { font-size: 2em; }
+
+blockquote {
+	background-color: var(--accent);
+	color: var(--fill);
+	padding: 1em;
+}
+
+blockquote a, blockquote code {
+	color: var(--text);
+}
+
+cite {
+	display: block;
+	text-align: right;
+}
+
+code, details, pre {
+	background-color: var(--bglighter);
+}
+
+code {
+	font-family: 'Courier New', monospace;
+	padding: 2px;
+}
+
+.date {
+	margin-top: -1rem;
+	margin-bottom: 1rem;
+	font-size: 0.9em;
+}
+
+details, pre {
+	padding: 0.5em;
+	padding-top:15px;
+}
+
+pre { overflow-x: auto; }
+
+details p { margin: 1rem 0 1rem 2rem; }
+
+table {	border: 5px solid var(--line); }
+tr, td, th { border: 2px solid var(--line); }
+td, th { padding: 3px }
+
+ul {
+	list-style: disc inside url("/images/sprout.gif");
+	margin-left: 1em;
+	padding: 0;
+}
+
+
+.article {
+  display: flex;
+  padding: 0 15px;
+ }
+
+.article .item, .article .price {
+  flex: 1 0 auto;
+}
+
+.article .item {
+  color: var(--line);
+  font-size: 1rem;
+  font-family: monospace;
+  letter-spacing: 0.1rem;
+  text-decoration: underline wavy var(--lighterfill) 1px;
+  text-underline-offset: 2.5px;
+  font-style: italic;
+}
+
+.article .dots {
+  flex: 0 1 auto;
+  margin: 0 5px;
+  /*Allows too long content to be hidden.*/
+  overflow: hidden;
+}
+
+.dots::before {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: clip;
+  content:
+    ". . . . . . . . . . . . . . . . . . . . "
+    ". . . . . . . . . . . . . . . . . . . . "
+    ". . . . . . . . . . . . . . . . . . . . "
+    ". . . . . . . . . . . . . . . . . . . . "
+}
+
+.dataTitle {
+  padding:7px 8px;
+  border-bottom:2px dashed rgba(36, 58, 37, 0.848);
+}
+
+.boldUnderline {
+  color: var(--line);
+  font-size: 1rem;
+  font-family: monospace;
+  letter-spacing: 0.1rem;
+  text-decoration: underline wavy var(--lighterfill) 1px;
+  text-underline-offset: 2.5px;
+  font-style: italic;
+}
+
+	:root {
+		/* ----------------- gallery variables ----------------- */
+
+		/* gap between images */
+		--gap: 0.8rem;
+
+		/* width of the images */
+		--image-width: 125px;
+
+		/* height of the images. can be set to auto if you want images to be shown in full, but will no longer be a grid */
+		--image-height: 125px;
+
+		/* flex-start to float images in the last row to the left of the container and center to center */
+		--image-justify: center;
+
+		/* maximum number of images per row. only used in the following calculation */
+		--maximum-images: 8;
+
+		/* max width of the gallery container. you can change this to whatever you want, this calculation is here so that if --image-justify is set to flex-start or flex-end, then your images still look centered on the page when the viewport is wider than --container-width */
+		/*--container-width: 1000px;
+    calc(calc(var(--image-width) * var(--maximum-images)) + (var(--gap) * (var(--maximum-images) - 1)));*/
+
+		/* length of the various transitions */
+		--animation-length: 0.35s;
+
+		/* ----------------- image variables ----------------- */
+
+		/* when hovering images, overlay with this color */
+		--image-overlay: rgba(0, 0, 0, 0.5);
+
+		/* border of the images */
+		--image-border: 2px solid var(--fill);
+
+		/* border radius of the images */
+		--image-border-radius: 5px;
+
+		/* border of the images for dark mode */
+		--image-border-dark: 2px solid var(--lighterfill);
+
+		/* ----------------- caption variables ----------------- */
+
+		/* color for the caption */
+		--caption-color: #f6ffdd;
+
+		/* font size for the caption */
+		--caption-font-size: 1rem;
+
+		/* padding for the caption, the popup, and the tag buttons */
+		--caption-padding: var(--gap);
+
+		/* ----------------- popup variables ----------------- */
+
+		/* when the popup is opened, overlay with this color */
+		--page-overlay: rgba(0, 0, 0, 0.7);
+
+		/* max width of the popup */
+		--popup-width: 30rem;
+
+		/* max height of the popup */
+		--popup-height: 80svh;
+
+		/*  padding for the popup */
+		--popup-padding: var(--gap);
+
+		/* background color for the popup */
+		--popup-background-color: var(--darkerfill);
+
+		/* color of the popup's text */
+		--popup-text: var(--text);
+
+		/* box shadow for the popup */
+		--popup-box-shadow: 4px 4px 0 rgb(0, 0, 0, 0.5);
+
+		/* border for the popup */
+		--popup-border: var(--image-border);
+
+		/* border radius for the popup */
+		--popup-border-radius: var(--image-border-radius);
+
+		/* popup colors for dark mode */
+		--popup-background-color-dark: var(--darkerfill);
+		--popup-text-dark: var(--text);
+		--popup-box-shadow-dark: 4px 4px 0 #000;
+		--popup-border-dark: var(--image-border-dark);
+
+		/* ----------------- tag system variables ----------------- */
+
+		/* padding for the tag buttons */
+		--tag-padding: var(--gap);
+
+		/* background color for the tag buttons */
+		--tag-background-color: var(--popup-background-color);
+
+		/* color for the tag buttons */
+		--tag-text: var(--popup-text);
+
+		/* border for the tag buttons */
+		--tag-border: var(--popup-border);
+
+		/* border radius for the tag buttons */
+		--tag-border-radius: var(--popup-border-radius);
+
+		/* tag button colors for dark mode */
+		--tag-background-color-dark: var(--bg);
+		--tag-text-dark: var(--text);
+		--tag-border-dark: var(--bg);
+	}
+
+	* {
+		margin: 0;
+		padding: 0;
+		border: 0;
+		outline: 0;
+		background: transparent;
+		box-sizing: border-box;
+		border-image-width: 0;
+	}
+
+	/* filter system */
+
+	form {
+
+		display: flex;
+		flex-wrap: wrap;
+		gap: var(--gap);
+		justify-content: center;
+		margin-bottom: var(--gap);
+
+		input[type="checkbox"] {
+			display: none;
+		}
+
+		/* styling for the buttons */
+
+		& label {
+			font-family: 'Dosis', sans-serif;
+      display: inline-block;
+			min-width: 7ch;
+			text-align: center;
+			user-select: none;
+			cursor: pointer;
+			padding: 5px;
+			border: var(--tag-border);
+			border-radius: var(--tag-border-radius);
+			background-color: var(--tag-background-color);
+			color: var(--tag-text);
+
+			&:hover {
+				background: color-mix(in lab, var(--tag-background-color) 90%, var(--tag-background-color-dark));
+			}
+
+			&:has(:checked) {
+				background: color-mix(in lab, var(--tag-background-color-dark) 30%, var(--tag-background-color));
+				color: var(--accent);
+
+				&:hover {
+					background: color-mix(in lab, var(--tag-background-color-dark) 10%, var(--tag-background-color));
+				}
+			}
+		}
+	}
+
+	/* hide images that don't match the selected filters. must be updated every time a new filter is added */
+
+/* 		MAKE SURE TO ADD THIS INTO THE HTML STYLESHEET!!!!!!!!
+	form:has([name="reviewed"]:checked)~#image-grid-container section:not([category~="reviewed"]),
+	form:has([name="listened"]:checked)~#image-grid-container section:not([category~="listened"]),
+	form:has([name="inprogress"]:checked)~#image-grid-container section:not([category~="inprogress"]),
+	form:has([name="unreviewed"]:checked)~#image-grid-container section:not([category~="unreviewed"]),
+	form:has([name="unlistened"]:checked)~#image-grid-container section:not([category~="unlistened"]),
+	form:has([name="stier"]:checked)~#image-grid-container section:not([category~="stier"]),
+	form:has([name="atier"]:checked)~#image-grid-container section:not([category~="atier"]),
+	form:has([name="btier"]:checked)~#image-grid-container section:not([category~="btier"]),
+	form:has([name="ctier"]:checked)~#image-grid-container section:not([category~="ctier"]) {
+		display: none;
+	}*/
+
+	/* container for the image gallery */
+
+	#image-grid-container {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: var(--image-justify);
+		align-content: flex-start;
+		align-items: center;
+		gap: var(--gap);
+		max-width: 100%;
+		margin: 0 auto;
+	}
+
+	/* container for each image */
+
+	#image-grid-container section {
+		flex: 0 1 var(--image-width);
+
+		/* seemingly fixes an issue when --image-height is set to auto */
+		& label {
+			height: min-content;
+			display: flex;
+		}
+	}
+
+	/* make checkbox toggle invisible */
+
+	.modal-toggle {
+		height: 0;
+		left: -9999rem;
+		overflow: hidden;
+		pointer-events: none;
+		position: absolute;
+		user-select: none;
+		width: 0;
+	}
+
+	/* image container */
+
+	.img-box {
+		cursor: pointer;
+		display: inline-block;
+		position: relative;
+		width: 100%;
+		height: var(--image-height);
+		overflow: hidden;
+		border: var(--image-border);
+		border-radius: var(--image-border-radius);
+
+		& img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: center;
+			transition: var(--animation-length) ease;
+
+			/* slight desaturation. feel free to remove
+			filter: grayscale(50%);*/
+		}
+	}
+
+	/* hover effect on images. tweak to your tastes
+    or turn off entirely  */
+
+	.img-box:hover img,
+	section label:focus .img-box img {
+		transform: scale(1.08);
+		filter: grayscale(0%);
+	}
+
+	/* overlay for images. also contains the caption */
+
+	.transparent-box {
+		transition: var(--animation-length) ease;
+		opacity: 0;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+	}
+
+	.img-box:hover .transparent-box,
+	section label:focus .transparent-box {
+		opacity: 1.0;
+		background-color: var(--image-overlay);
+	}
+
+	/* the way i have it set up, the caption is at the bottom.
+    if you want it to be at the top, comment out bottom in .caption.
+    if you want it to be centered, comment out bottom and left
+    in .caption, then uncomment top, left, transform, and -ms-transform. */
+
+	.caption {
+		position: absolute;
+		padding: var(--caption-padding);
+		bottom: 0rem;
+		left: 0rem;
+		opacity: 1;
+		transition: all var(--animation-length) ease;
+		color: var(--caption-color);
+		font-size: var(--caption-font-size);
+		filter: drop-shadow(1px 1px 0 #020906) drop-shadow(-1px 1px 0 #020906) drop-shadow(1px -1px 0 #020906) drop-shadow(-1px -1px 0 #020906);
+		/* top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%); */
+	}
+
+	/* hover effect on caption. tweak to your tastes or turn off entirely. */
+
+	.img-box:hover .caption,
+	section label:focus .caption {
+		transform: skewX(-15deg);
+	}
+
+	/* modal */
+
+	/* instead of using display: none then display: block when the checkbox is checked like usual, i've instead used opacity to hide and show the modal. this way the animation is smooth. this requires setting pointer-events: none and user-select: none so that the user can't interact with the invisible modal before it's shown. z-index also needs to be increased to make sure the modal is on top of the following <section> elements  */
+
+	.modal {
+		position: fixed;
+		right: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-color: var(--page-overlay);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: var(--popup-padding);
+		opacity: 0;
+		transition: opacity var(--animation-length) ease;
+		z-index: 2;
+		pointer-events: none;
+		user-select: none;
+	}
+
+	/* when the checkbox is checked, show the modal and allow interaction */
+
+	.modal-toggle:checked~.modal {
+		opacity: 1;
+		transition: all var(--animation-length) ease;
+		pointer-events: all;
+		user-select: auto;
+	}
+
+	/* animate the opening of the popup. tweak to your tastes or turn off entirely */
+
+	@keyframes open {
+		0% {
+			transform: scale(.8);
+		}
+
+		70% {
+			transform: scale(1.02);
+		}
+
+		100% {
+			transform: none;
+		}
+	}
+
+	.modal-toggle:checked~.modal .modal-content {
+		animation: open var(--animation-length) ease-out;
+	}
+
+	/* when the modal is opened, the <label> that closes the modal covers the entire screen behind the modal, allowing the user to click on the background to close it */
+
+	.modal-close::before {
+		bottom: 0;
+		content: '';
+		left: 0;
+		position: absolute;
+		right: 0;
+		top: 0;
+		cursor: pointer;
+	}
+
+	/* styling of the popup */
+
+	.modal-content {
+		width: 75svw;
+		position: fixed;
+		overflow-y: auto;
+		box-sizing: border-box;
+		padding: var(--popup-padding);
+		max-width: var(--popup-width);
+		max-height: var(--popup-height);
+		box-shadow: var(--popup-box-shadow);
+		border: var(--popup-border);
+		border-radius: var(--popup-border-radius);
+		background-color: var(--popup-background-color);
+		color: var(--popup-text);
+	}
+
+	/* dark mode */
+
+	@media (prefers-color-scheme: dark) {
+
+		form label {
+			color: var(--tag-text-dark);
+			background-color: var(--tag-background-color-dark);
+			border: var(--tag-border-dark);
+
+			&:hover {
+				background: color-mix(in lab, var(--tag-background-color-dark) 80%, var(--tag-background-color));
+			}
+
+			&:has(:checked) {
+				background: color-mix(in lab, var(--tag-background-color) 50%, var(--tag-background-color-dark));
+				color: var(--accent);
+
+				&:hover {
+					background: color-mix(in lab, var(--tag-background-color) 30%, var(--tag-background-color-dark));
+				}
+			}
+		}
+
+		.modal-content {
+			color: var(--popup-text-dark);
+			background-color: var(--popup-background-color-dark);
+			box-shadow: var(--popup-box-shadow-dark);
+			border: var(--popup-border-dark);
+		}
+	}
+
+	/* if you set var(--image-justify) to flex-start or flex-end, this section will make sure the image gallery is centered on the page when the viewport is smaller than the --container-width + page padding. this means that justify-content basically only applies to the last row of images.
+
+    if you do NOT want your image gallery to be centered (you want justify-content to apply to all rows) comment out or delete the following three media queries. you can also delete them if you set var(--image-justify) to center.
+
+    when the the viewport is smaller than the --container-width + page padding, the number of columns decreases. when this happens, the --container-width is 100% of its container. but then the images are not centered because justify-content is set to flex-start or flex-end. if you only want the flex-start or flex-end behavior to apply to the last row, we need to update the container width.
+
+    to do so, use the calculation i gave above but instead of using the --maximum-images, we need to use the number of columns currently being displayed. all we have to do is replace the var(--maximum-images) with the number of columns, then call the --container-width calculation again.
+
+    however, we need to manually set the breakpoint, the viewport width at which the number of columns changes. in standard css, media queries cannot accept variables, so i can't calculate this width dynamically for you. the idea is that we want the minimum value the container width can be for a given number of columns, plus the space between the left and right edge of the screen.
+
+    (var(--image-width) * (number of columns + 1)) + (var(--gap) * (number of columns))
+    + (the space between your image gallery and the left and right edge of the screen)
+
+    for this demo page i have the page padding at 2rem on the left and right, so that adds 4rem. 1rem = 16px. if you put <main> inside of another container with its own padding, you'll need to take that into account.
+
+    my calculations for this demo page are:
+
+    in the case of four columns, it would be
+        (300px * 5) + (16px * 4) + (4 * 16px)
+        = 1500px + 64px + 64px
+        = 1628px.
+
+    in the case of three columns, it would be
+        (300px * 4) + (16px * 3) + (4 * 16px)
+        = 1200px + 48px + 64px
+        = 1312px.
+
+    in the case of two columns, it would be
+        (300px * 3) + (16px * 2) + (4 * 16px)
+        = 900px + 32px + 64px
+        = 996px.
+
+    in the case of one column, it would be
+        (300px * 2) + (16px * 1) + (4 * 16px)
+        = 600px + 16px + 64px
+        = 680px.
+
+    if this all sounds like wayyyyyyyyyy too much math, you can just use your browser's developer tools to adjust the width of your viewport, then record the width of the viewport when the number of columns changes. on firefox the viewport is displayed on the upper right corner of the page when dev tools are open and you change its width.
+
+    you could also use a css preprocessor like sass that allows you to use variables, but if you know how to do that, you probably don't need me to explain all this to you. */
+
+	@media screen and (max-width: 1628px) {
+		:root {
+			--maximum-images: 4;
+			--container-width: calc(calc(var(--image-width) * var(--maximum-images)) + (var(--gap) * (var(--maximum-images) - 1)));
+		}
+	}
+
+	@media screen and (max-width: 1312px) {
+		:root {
+			--maximum-images: 3;
+			--container-width: calc(calc(var(--image-width) * var(--maximum-images)) + (var(--gap) * (var(--maximum-images) - 1)));
+		}
+	}
+
+	@media screen and (max-width: 996px) {
+		:root {
+			--maximum-images: 2;
+			--container-width: calc(calc(var(--image-width) * var(--maximum-images)) + (var(--gap) * (var(--maximum-images) - 1)));
+		}
+	}
+
+	/* once the images are in a single column, i prefer to have the images expand to the width of the viewport, then let the full height of the image show. personally i think this looks nicer on mobile.
+
+    even if var(--image-justify) is set to center, i recommend keeping this. */
+
+	@media screen and (max-width: 680px) {
+
+		#image-grid-container section {
+			/* let the images expand to the width of the container */
+			flex: 1 1 100%;
+		}
+
+		.img-box {
+			/* let the image height be automatically determined so that the full image is displayed */
+			height: auto;
+		}
+
+		/* if your popups have a lot of text, leave this enabled. setting align-items: start moves the popup to the top of the screen, which gives some more space at the bottom for mobile users to close the modal. setting the popup to max-height: 85svh also helps to 1) make the popup long enough for mobile users to actually read what's inside if you've set var(--popup-height) shorter, and 2) makes sure there's enough space at the bottom to close out of it if you've set it higher.
+
+        if you don't like the way this looks, you could also add a button inside the popup to close it. */
+
+		.modal {
+			align-items: start;
+		}
+
+		.modal-content {
+			max-height: 85svh;
+		}
+	}
+
+/*START OF MOBILE-VIEW CSS*/
+/*START OF MOBILE-VIEW CSS*/
+/*START OF MOBILE-VIEW CSS*/
+
+@media screen and (max-width: 600px){
+
+	nav, main, .stripe {
+		float: none;
+		width: 100%;
+		height: fit-content;
+	}
+
+	nav {
+		padding-left: 2lvw;
+		padding-top: 2lvw;
+		padding-bottom: 2lvw;
+		padding-right: 2lvw;
+	}
+
+ .half, .third, .twothird, .threequarter, .quarter {
+		margin-left: 10%;
+		margin-right: 10%;
+		padding-left: 10%;
+		padding-right: 10%;
+ }
+
+ .parentabout, .leftbox, .rightbox {
+    display: block;
+    position: static;
+    width: 100%;
+    }
+
+
+.parentabout {
+    padding-top: 10px;
+		padding-bottom: 10px;
+    }
+
+
+.leftbox, .rightbox, .fullbox {
+    margin: 20px 0 20px 0;
+    }
+
+
+  .hover-box:hover .hover-text {
+      width:99.25%;
+    }
+
+
+	.userBox {
+		height: fit-content;
+		width: 100%;
+	}
+
+	.fmBox {
+		height: fit-content;
+		width: 195px;
+	}
+
+	.iframeText {
+		font-size: 0.4em;
+	}
+
+	.musicText {
+		font-size: 0.8em;
+	}
+
+	nav {
+		height: 100px
+	}
+
+	nav div {
+		height: fit-content;
+		width: 100%;
+		position: static;
+		-ms-transform: translateY(0);
+		transform: translateY(0);
+		padding-left: 35%;
+		text-align: right;
+		font-size:0.8em;
+		max-width: 90lvw;
+		line-height: 2.15em;
+	}
+	nav img {
+		z-index: -1;
+		position: absolute;
+		left: -10px;
+		top: 12px;
+		max-height: 85px;
+	}
+
+	nav a {
+		display: inline-block;
+		margin: 5px;
+	}
+
+	nav a::after { content: " ↗"; }
+
+	ul, li {
+		font-size:0.85em;
+
+}
+
+	main {
+		overflow: auto;
+		padding: 2em 1em;
+	}
+
+	header {
+		text-align: center;
+		font-size: 1.5em;
+	}
+
+	.lessMargin {
+		padding-top: 10px;
+		padding-bottom: 0px;
+		margin-bottom: -20px;
+	}
+
+	img {
+		margin: 0 0;
+		margin-bottom: 0;
+		font-family: 'Dosis', sans-serif;
+	}
+
+	section { padding: 0 1em; }
+
+	.stripe { height: 30px; }
+
+	*::-webkit-scrollbar { width: 10px; }
+
+}
+
+@media screen and (max-width: 330px){
+
+	nav div {
+			font-size: 3.75lvw;
+			line-height: 7lvw;
+			padding-top: 3.5lvw;
+		}
+
+	nav img {
+		height: 33lvw;
+		padding-top: 2lvw;
+	}
+}
+
+@media screen and (max-width: 320px){
+
+	table {
+		white-space: normal;
+		table-layout:fixed;
+		width:100% !important;
+	}
+
+}
+
+@media screen and (max-width: 300px){
+
+/**	nav div {
+			padding-top:5px;
+			font-size: 0.6em;
+		}**/
+
+
+	.scrollBar {
+		border: none;
+		overflow-y: auto;
+		font-size:auto;
+
+	}
+}
+
+
+@media screen and (max-width: 290px){
+
+	nav div {
+			padding-top: 4.5lvw;
+			line-height: 8lvw;
+		}
+
+nav {
+	padding-top: 0;
+}
+
+}
+
+	/* this stuff is for styling the demo. you don't need to keep this.
+       styling cribbed from tiny brutalism css:
+       https://github.com/pruger/tiny-brutalism-css */
+
+	@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
+
+	/* body {
+		font-family: 'Roboto Mono', monospace;
+		background-color: #fff;
+		color: #000;
+		line-height: 1.7rem;
+		margin: 0 auto;
+		min-height: 100svh;
+		padding: 2rem 2rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	h1 {
+		margin: 1rem 0;
+		font-weight: 700;
+		line-height: 2.5rem;
+	}
+
+	p+p {
+		margin-top: 1rem;
+	}
+
+	a {
+		color: rgb(179, 26, 26);
+	}
+
+	ul {
+		list-style-type: square;
+		margin: 1em 0 1em 2em;
+		padding: 0;
+	}
+
+	li {
+		font-family: inherit;
+		margin-bottom: 0.5em;
+	}
+
+	code {
+		border: 2px solid #000000be;
+		line-height: unset;
+		background-color: #0000003f;
+		padding: 0.2rem;
+	}
+
+	footer {
+		text-align: right;
+	}
+
+	@media (prefers-color-scheme: dark) {
+
+		body,
+		html {
+			background-color: #333;
+			color: white;
+		}
+	}*/
