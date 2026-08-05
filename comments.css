@@ -1,0 +1,238 @@
+:root {
+--text: #deeeba;
+--outline: #3e563e62;
+--line: #92AD85;
+--accent: #8fbc8f;
+--bg: #1F2F22;
+--fill: #3E563E;
+}
+
+@font-face {
+  font-family: Kalam; /* set name */
+  src: url(https://fonts.googleapis.com/css?family=Kalam); /* url of the font */
+  font-family: Dosis; /* set name */
+  src: url(https://fonts.googleapis.com/css?family=Dosis); /* url of the font */
+  font-family: K2D; /* set name */
+  src: url(https://fonts.googleapis.com/css?family=K2D); /* url of the font */
+}
+
+.hcb-wrapper-half {
+  flex: 1 1 30%;
+  margin: 0;
+  min-width:200px;
+}
+
+#hcb_form {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center
+}
+
+#HCB_comment_box .hcb-wrapper{
+  flex:1 0 100%
+}
+
+
+#HCB_comment_box > *,
+#HCB_comment_box #hcb_form_content,
+ #HCB_comment_box #hcb_form_email,
+ #HCB_comment_box #hcb_form_name,
+ #HCB_comment_box #hcb_form_website,
+ #HCB_comment_box #hcb_submit,
+ #HCB_comment_box .author-name,
+ #HCB_comment_box .hcb-comment-body,
+ #HCB_comment_box .hcb-comment-tb a, textarea#hcb_form_content.commentbox, textarea#hcb_form_content, #HCB_comment_box #hcb_form textarea, #HCB_comment_box #hcb_form #hcb_form_name {
+  font-family: 'Open Sans', sans-serif;
+
+}
+
+#HCB_comment_box h3, #HCB_comment_box #hcb_form .home-desc, .admin-link, label#hcb_subscribe span, label#hcb_subscribe input {
+  display:none !important;
+
+
+}
+
+
+#comments #HCB_comment_form_box {
+  background:var(--text);
+  padding:5px 15px;
+  box-shadow:none
+}
+
+#HCB_comment_form_box {
+  background:var(--line);
+  color:var(--bg);
+  outline:var(--fill) dashed 1px;
+  border-radius:5px;
+  padding:10px 10px;
+  font-size:12px;
+  margin-bottom:50px
+}
+
+#HCB_comment_box .hcb-comment-body br {
+   display: block;
+   margin: 10px 0;
+}
+b.author-name {
+    color: var(--bg)
+}
+span.date {
+    color: var(--fill) !important;
+    font-size: 12px !important;
+    font-style:italic;
+    font-family: 'K2D';
+}
+
+p.hcb-comment-tb button {
+    color:var(--accent) !important;
+    font-family: 'K2D', sans-serif;
+    text-transform: lowercase;
+    opacity: 0.9;
+    font-size: 14px !important
+}
+
+#HCB_comment_box #hcb_form textarea,
+#HCB_comment_box #hcb_form #hcb_form_name,  #HCB_comment_box  #hcb_form_website,  #HCB_comment_box #hcb_form_email {
+    background: var(--text) !important;
+    font-family: 'K2D', sans-serif !important;
+    font-size: 12px;
+    color: var(--bg);
+    border: var(--text) dashed 1px;
+    min-height: 50px;
+    border-radius: 5px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+#hcb_form_name, #hcb_form_website, #hcb_form_email  {
+  /* display:inline-block;
+  float:left; */
+  /* margin-bottom:10px; */
+  font-size: 12px;
+  margin:10px !important;
+  width:90%
+}
+
+#HCB_comment_box #hcb_form textarea::placeholder,
+#HCB_comment_box #hcb_form #hcb_form_name::placeholder,  #HCB_comment_box #hcb_form_website::placeholder {
+    text-transform: lowercase;
+}
+
+label#hcb_file_label,
+#HCB_comment_box > h3, .admin-link, div.home-desc, .home-desc {
+    display: none;
+}
+
+input#hcb_submit{
+    background: var(--bg) !important;
+    color:var(--line);
+    font-family: 'Open Sans' !important;
+    font-style:italic;
+    text-transform: lowercase;
+    max-width:100%;
+    word-wrap: break-word;
+    height: auto;
+    border: 1px var(--line) solid !important;
+    font-size: 15px !important;
+    border-radius:5px;
+    padding:5px 30px;
+}
+
+#HCB_comment_form_box .btn-secondary {
+    justify-self: center;
+    background: var(--text) !important;
+    font-family: 'Open Sans' !important;
+    font-style:italic;
+    text-transform: lowercase;
+    max-width:auto;
+    height: auto;
+    border: 1px var(--line) solid !important;
+    font-size: 15px !important;
+    border-radius:5px;
+    padding:5px 30px;
+    margin-left:45%;
+    margin-right:45%;
+}
+
+@media screen and (max-width: 800px){
+#HCB_comment_form_box .btn-secondary {
+    margin-left:30%;
+    margin-right:30%;
+}
+
+}
+
+
+input#hcb_submit:hover {
+      background: var(--fill) !important;
+      color:var(--fill)
+}
+#hcb_form_name_container {
+    text-align: left;
+    text-align-last: left;
+}
+
+a[href^="https://www.htmlcommentbox.com/rss_clean?"]
+{
+    display: none;
+}
+
+span#replying_to_container {
+    font-family: 'Open Sans'; font-style:italic;
+    color: var(--line) !important;
+}
+#HCB_comment_box #comments_list {
+    overflow-x: hidden !important;
+    max-height: 200px;
+    overflow-y: auto !important
+}
+#comments_list .comment {
+    border-top: 3px var(--text) dotted;
+    padding-top: 20px;
+    max-height:auto;
+    margin-bottom: 10em;
+    width:100% !important;
+    font-size:18px;
+}
+
+
+
+.likes {
+    padding: 32px 10px 10px 10px;
+    font-family:'Open Sans';
+    color:var(--bg);
+    height:15px;
+    vertical-align:center;
+    font-size:14px !important;
+
+}
+
+.likes img {display:none }
+.likes span::before {
+    content:"❤︎";
+    color:var(--bg);
+  }
+
+
+
+p#no_comments { font-family:'Open Sans'; font-style:italic }
+
+#HCB_comment_box p.error {
+    border: 4px solid var(--fill);
+    background-color: var(--text);
+    color: var(--fill);
+}
+#HCB_comment_box .hcb-wrapper {
+    clear: both;
+    margin-bottom: 0.5em;
+}
+
+
+.hcb-mod b {
+    color: var(--bg);
+}
+.hcb-link {
+    color: var(--bg);
+    text-decoration: underline;
+}

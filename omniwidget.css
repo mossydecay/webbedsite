@@ -1,0 +1,172 @@
+:root {
+	--text: #deeeba;
+  --outline: #3e563e62;
+	--line: #92AD85;
+	--lighterline: #abc49f;
+	--accent: #8fbc8f;
+	--bg: #1F2F22;
+	--bgdarker: #1A2922;
+	--fill: #3E563E;
+	--lighterfill: #567656;
+}
+
+
+@font-face {
+  font-family: Kalam; /* set name */
+  src: url(https://fonts.googleapis.com/css?family=Kalam); /* url of the font */
+  font-family: Dosis; /* set name */
+  src: url(https://fonts.googleapis.com/css?family=Dosis); /* url of the font */
+  font-family: K2D; /* set name */
+  src: url(https://fonts.googleapis.com/css?family=K2D); /* url of the font */
+}
+
+#omw-watching_star_trek {
+  --omw-bg:          #0d1117;
+  --omw-border:      rgba(57,211,83,0.2);
+  --omw-shadow:      none;
+  --omw-heading-bg:  rgba(57,211,83,0.05);
+  --omw-row-border:  rgba(57,211,83,0.1);
+  --omw-text:        #39d353;
+  --omw-muted:       #238636;
+  --omw-link:        #58a6ff;
+  --omw-dot-active:  #39d353;
+  --omw-font:				'Dosis', sans-serif;
+  --omw-radius:      4px;
+}
+
+#omw-watching_star_trek .omw-card {
+	background: var(--bg) !important;
+	border-color: var(--outline) !important;
+	box-shadow: none !important;
+}
+
+#omw-watching_star_trek .omw-heading {
+	border-color: var(--bg) !important;
+	background: var(--bgdarker) !important;
+	color: #f1ffd2 !important;
+	letter-spacing: 0.2rem;
+	font-family: 'K2D' !important;
+	font-style: oblique;
+}
+
+#omw-watching_star_trek .omw-category, .omw-title, .omw-subtitle {
+	color: var(--text) !important;
+}
+
+#omw-watching_star_trek .omw-title a {
+	color: var(--accent) !important;
+	text-decoration: underline !important;
+}
+
+#omw-watching_star_trek .omw-title a:hover {
+	color: var(--lighterfill) !important;
+	text-decoration: underline !important;
+
+}
+
+#omw-watching_star_trek .omw.icon, .omw-row span {
+	padding-top: 7% !important;
+	font-size: 22px !important;
+	margin-right: 2px !important;
+}
+
+#omw-watching_star_trek .omw-dots { display: none; }
+
+
+#omw-reading {
+  --omw-bg:          #0d1117;
+  --omw-border:      rgba(57,211,83,0.2);
+  --omw-shadow:      none;
+  --omw-heading-bg:  rgba(57,211,83,0.05);
+  --omw-row-border:  rgba(57,211,83,0.1);
+  --omw-text:        #39d353;
+  --omw-muted:       #238636;
+  --omw-link:        #58a6ff;
+  --omw-dot-active:  #39d353;
+  --omw-font:				'Dosis', sans-serif;
+  --omw-radius:      4px;
+}
+
+#omw-reading .omw-card {
+	background: var(--bg) !important;
+	border-color: var(--outline) !important;
+	box-shadow: none !important;
+}
+
+#omw-reading .omw-heading {
+	border-color: var(--bg) !important;
+	background: var(--bgdarker) !important;
+	color: #f1ffd2 !important;
+	letter-spacing: 0.2rem;
+	font-family: 'K2D' !important;
+	font-style: oblique;
+}
+
+#omw-reading .omw-category, .omw-title, .omw-subtitle {
+	color: var(--text) !important;
+}
+
+#omw-reading .omw-title a {
+	color: var(--accent) !important;
+}
+
+#omw-reading .omw.icon, .omw-row span {
+	padding-top: 7% !important;
+	font-size: 22px !important;
+	margin-right: 2px !important;
+}
+
+#omw-reading .omw-dots { display: none; }
+
+
+#omw-playing {
+  --omw-bg:          #0d1117;
+  --omw-border:      rgba(57,211,83,0.2);
+  --omw-shadow:      none;
+  --omw-heading-bg:  rgba(57,211,83,0.05);
+  --omw-row-border:  rgba(57,211,83,0.1);
+  --omw-text:        #39d353;
+  --omw-muted:       #238636;
+  --omw-link:        #58a6ff;
+  --omw-dot-active:  #39d353;
+  --omw-font:				'Dosis', sans-serif;
+  --omw-radius:      4px;
+}
+
+#omw-playing .omw-card {
+	background: var(--bg) !important;
+	border-color: var(--outline) !important;
+	box-shadow: none !important;
+}
+
+#omw-playing .omw-heading {
+	border-color: var(--bg) !important;
+	background: var(--bgdarker) !important;
+	color: #f1ffd2 !important;
+	letter-spacing: 0.2rem;
+	font-family: 'K2D' !important;
+	font-style: oblique;
+}
+
+#omw-playing .omw-category, .omw-title, .omw-subtitle {
+	color: var(--text) !important;
+}
+
+#omw-playing .omw-title a {
+	color: var(--accent) !important;
+	text-decoration: underline !important;
+}
+
+#omw-playing .omw-title a:hover {
+	color: var(--lighterfill) !important;
+	text-decoration: underline !important;
+
+}
+
+#omw-playing .omw.icon, .omw-row span {
+	padding-top: 7% !important;
+	font-size: 22px !important;
+	margin-right: 2px !important;
+}
+
+#omw-playing .omw-dots { display: none; }

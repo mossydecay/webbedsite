@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burrow Not Found</title>
+
+    <link href='https://fonts.googleapis.com/css?family=Kalam' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Dosis' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=K2D' rel='stylesheet'>
+
+<style>
+
+      *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        margin: 0;
+        background-color: #1F2F22; /*MAIN BACKGROUND COLOR*/
+        background-image: url("images/bg29 v3.gif");
+        color: #deeeba; /*FONT COLOR*/
+        font-family: 'Open Sans', sans-serif;
+        padding: 20px;
+      }
+
+      ul {
+        list-style: disc inside url("/images/sprout.gif");
+        margin-left: 1em;
+        padding: 0;
+      }
+
+      .title {
+        padding-left: 0.5rem;
+        font-size: 40px;
+        line-height: 20px;
+        position: relative;
+        z-index: 1;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+      }
+
+      .block-1 {
+        flex-grow: 2;
+        flex-basis: 0;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+        background-color: #3E563E; /*LEFT BLOCK BG COLOR*/
+      }
+
+      .block-2 {
+        flex-grow: 8;
+        flex-basis: 0;
+      }
+
+      .pfp {
+        width: 100%;
+        border: 2px solid #091008; /*LARGER IMAGE BORDER OUTLINE*/
+      }
+
+      .headers {
+        font-family: 'Dosis', sans-serif;
+      }
+
+      .headerside {
+        font-family: 'Dosis', sans-serif;
+        text-align:center;
+        text-decoration: underline;
+      }
+
+      .block-1 ul {
+        padding-left: 2.5em;
+      }
+
+      .block-1 li {
+        font-style: italic;
+      }
+
+      .content {
+        display: flex;
+        flex-direction: column;
+        row-gap: 1rem;
+      }
+
+      .area {
+        background-color: #3E563E; /*MAIN BLOCK BG COLOR*/
+        padding: 1rem;
+        border-left: 4px solid #92AD85; /*BOX BORDER LEFT*/
+        display: flex;
+        flex-direction: column;
+        row-gap: 1rem;
+      }
+
+      .postheadwrapper  {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .posthead {
+        align-self: center;
+      }
+
+      .posth2 {
+        font-size: 26px;
+      }
+
+      .date {
+        font-size: 13px;
+      }
+
+      .icon {
+        height: 48px;
+        opacity: 1;
+        align-self: center;
+      }
+
+      .scrollBar {
+        border: none;
+        overflow-y: auto;
+
+      }
+
+
+      .shadow :hover {
+        transition: box-shadow 0.2s;
+        box-shadow: 7px 7px 6px #304230;
+
+      }
+
+
+
+/*Start of @Media class*/
+      @media(max-width:480px) {
+        .container{
+        flex-direction: column;
+      }
+
+      .block-1 {
+        height: auto;
+        text-align: center;
+      }
+
+      .pfpwrapper {
+        display: flex;
+        justify-content: center;
+      }
+
+      .pfp{
+        width: 80%;
+      }
+
+      .block-1 ul, li{
+      list-style: disc inside url("/images/sprout.gif");
+      padding: 0;
+      }
+
+      .block-1 li {
+      margin-left: 5px;
+      }
+
+      .title {
+      text-align: center;
+      font-size: 44px;
+      }
+      }
+/*End of @Media Class*/
+
+
+
+      a:link, a:visited, a:active {
+        color: #adee95;
+        background-color: transparent;
+        text-decoration: none;
+      }
+
+      a:hover {
+        background-color: transparent;
+        text-decoration: underline;
+        font-weight: bold;
+      }
+
+
+      #credit{
+        font-size: 12px;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+      }
+
+      </style>
+
+      </head>
+
+  <body>
+    <center>
+    <h1>Nope! Not a page.</h1>
+    <p>It's either still in progress or doesn't exist at all.</p>
+    <p>Click the tree below to go home.</p>
+     <a href="\home.html"><img src="/images/plant6.gif"></a>
+    </center>
+  </body>
+</html>

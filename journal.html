@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html>
+<style>
+:root {
+	--text: #deeeba;
+  --outline: #3e563e62;
+	--line: #92AD85;
+	--lighterline: #abc49f;
+	--darkerline: #79946d;
+	--accent: #8fbc8f;
+	--bg: #1F2F22;
+	--bgdarker: #1A2922;
+	--bglighter: #2d4531;
+	--fill: #3E563E;
+	--lighterfill: #567656;
+	--darkerfill: #314931;
+}
+
+#postcontainer {
+  max-height: 300px;
+  overflow:auto;
+  margin: 10px 5px 10px 5px;
+  background-color: #567656;
+  padding: 10px 10px 10px 10px;
+  border-radius: 15px;
+  padding-right: -10px;
+}
+
+.footer {
+  display: flex;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  margin-top: -5px;
+}
+
+.footer a:hover, .footer a:focus {
+	color: var(--lighterline);
+  background-color: var(--bglighter) !important;
+  padding: 2px 4px 2px;
+  border-radius: 5px;
+}
+
+blockquote {
+  border-left: 4px solid var(--bglighter);
+  margin-bottom: 5px;
+  margin-top: 5px;
+  padding-left: 16px;
+}
+
+
+.textstuff {
+  margin: 0;
+}
+
+.post {
+  margin: 0;
+	box-sizing: border-box;
+}
+
+.post h2 { /**Post header size **/
+  font-size: 1.35rem;
+}
+
+.post p { /**Post content size **/
+	font-size: 1.2rem;
+	margin: 0;
+}
+
+.date {
+	margin-top: 0 !important;
+	margin-bottom: 0 !important;
+	font-size: 0.8rem !important;
+	font-family: 'K2D', sans-serif;
+  opacity: 60%;
+	font-style: italic;
+}
+
+.tags {
+  font-family: 'K2D', sans-serif;
+	color:#1F2F22;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+	font-family: 'K2D', sans-serif;
+	color: var(--accent);
+}
+
+a:hover, a:focus {
+	color: var(--darkerfill);
+}
+
+hr {
+    width: 100%;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* Centered modal box */
+.modal-content {
+  background: #567656;
+  width: 300px;
+  padding: 15px;
+  border: 1px var(--bgdarker) solid;
+  border-radius: 15px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Close button (X) */
+.close {
+  float: right;
+  cursor: pointer;
+  font-size: 20px;
+  position: relative;
+  top: -15px;
+}
+
+.modal-content .titlebar {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.titlebar {
+  font-style: italic;
+  padding-top: 5px;
+  margin-bottom: -5px;
+}
+
+.modal-content textarea {
+  height: 150px;
+  margin-top: -10px;
+  resize: vertical;
+}
+
+.modal-content button {
+  background: var(--bglighter) !important;
+  border: 1px solid var(--bglighter) !important;
+  color: var(--text) !important;
+
+}
+
+
+/* Form inputs */
+.modal-content input,
+.modal-content textarea,
+.modal-content button {
+  max-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid var(--lighterline);
+  outline: none;
+  color: var(--bg);
+  background: var(--text);
+  font-family: 'K2D', sans-serif;
+  font-size: .9em;
+  border-radius: 5px;
+}
+
+.modal-content input, .modal-content textarea {
+  padding: 10px 5px 10px;
+}
+
+.modal-content button {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  cursor: pointer;
+
+}
+
+iframe {
+  display: none;
+}
+
+  pre {
+  overflow-x: auto;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+}
+
+
+
+</style>
+
+<head><script type="text/javascript" src="/___vscode_livepreview_injected_script"></script>
+	<title> ✽⊱ Journal - Mossydecay's Burrow ⊰✽ </title>
+	<link href="stentor.css" rel="stylesheet" type="text/css" media="all">
+	<link rel="icon" type="image/x-icon" href="images/sprout.gif">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+  <script src="layout.js"></script>
+    <link href='https://fonts.googleapis.com/css2?family=Kalam&display=swap' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css2?family=Dosis&display=swap' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css2?family=K2D&display=swap' rel='stylesheet'>
+</head>
+
+<body>
+<!--where the sidebar went-->
+
+<main>
+<!-- Keeps sections from getting too stretched on ultrawide monitors -->
+<div class="container">
+
+
+<header>
+	<h3><a href="home.html">The Burrow</a></h3>
+</header>
+
+<section>
+    <h3 style="padding-top:10px; margin: 0;margin-bottom: -5px;">Journal</h3>
+
+
+<p> This tiny thing contains my blog entries, powered by <a target="_blank" href="https://tilde.club/~april/bloggable/" style="font-family: 'Dosis', sans-serif;">Bloggable</a>! Click a title to view.</p>
+  <iframe src="https://arpilmyroomim.neocities.org/embed/index.html?userId=c41ed0" frameborder="none"> </iframe>
+
+  <div id="postcontainer">Loading...
+  </div>
+
+ <div class = "footer">
+ <a style="margin: 0" href="#" onclick="openAskBox()"><b>[Askbox]</b></a>
+ </div>
+
+
+
+  <div id="askModal" class="modal">
+ <div class="modal-content">
+ <div class = "titlebar">
+   <span style = "position: relative; top: -9px;">Got a question?</span>
+   <span class="close" onclick="closeAskBox()"><b>&times;</b></span>
+ </div>
+
+   <form id="askForm">
+     <input type="text" name="username" placeholder="Username" required>
+     <br><br>
+     <textarea name="message" placeholder="Message" required></textarea>
+     <br><br>
+     <button type="submit"><i>Send!</i></button>
+   </form>
+ </div>
+</div>
+
+<script>
+  function getPostFromURL() {
+    const params = new URLSearchParams(window.location.search);
+    return params.get("post");
+  }
+
+  window.addEventListener("message", (event) => {
+    if (event.origin !== "https://arpilmyroomim.neocities.org") return;
+
+    if (event.data && event.data.type === "POSTS_DATA") {
+      const posts = event.data.posts;
+
+      const sortedPosts = [...posts].sort((a, b) => {
+        const aPinned = a.tags?.includes("pinned");
+        const bPinned = b.tags?.includes("pinned");
+
+        if (aPinned && !bPinned) return -1;
+        if (!aPinned && bPinned) return 1;
+
+        return new Date(b.postDate) - new Date(a.postDate);
+      });
+
+      /**console.log(sortedPosts);**/
+
+      const selectedPost = getPostFromURL();
+
+      if (selectedPost) {
+        displaySinglePost(sortedPosts, selectedPost);
+      } else {
+        displayPostList(sortedPosts);
+      }
+    }
+  });
+
+  function displayPostList(posts) {
+    const container = document.getElementById("postcontainer");
+
+    container.innerHTML = posts.map(post => {
+      const isPinned = post.tags?.includes("pinned");
+
+      const label = isPinned
+        ? "Pinned post"
+        : (post.postDate
+            ? new Date(post.postDate).toLocaleDateString("en-GB", {
+                day: "2-digit",
+                month: "short",
+                year: "numeric"
+              })
+            : "");
+
+      return `
+        <div class="post-link">
+          <span class="date">${label}</span>
+          —
+          <a href="?post=${encodeURIComponent(post.title)}">
+            ${post.title}
+          </a>
+        </div>
+      `;
+    }).join("");
+  }
+
+
+  function displaySinglePost(posts, title) {
+    const container = document.getElementById("postcontainer");
+
+    const post = posts.find(p => p.title === title);
+
+    if (!post) {
+      container.textContent = "Post not found";
+      return;
+    }
+
+    container.innerHTML = `
+      <div class="post">
+        <h2>${post.title}</h2>
+
+        <div class="content">
+          ${post.htmlContent || ""}
+        </div>
+
+        <div class="date">
+          ${post.postDate ? new Date(post.postDate).toLocaleString() : ""}
+        </div>
+
+        <div class="tags">
+          ${formatTags(post.tags)}
+        </div>
+
+        <br>
+        <a href="?">← Index</a>
+      </div>
+    `;
+  }
+
+  function formatTags(tags) {
+    if (!tags) return "";
+
+    if (Array.isArray(tags)) {
+      return tags.join(", ");
+    }
+
+    if (typeof tags === "string") {
+      return tags;
+    }
+
+    return "";
+  }
+
+
+  function openAskBox() {
+      document.getElementById("askModal").style.display = "block";
+  }
+
+  function closeAskBox() {
+      document.getElementById("askModal").style.display = "none";
+  }
+
+  // close when clicking outside the box
+  window.onclick = function(event) {
+    const modal = document.getElementById("askModal");
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  }
+
+
+const form = document.getElementById("askForm");
+
+form.addEventListener("submit", function (e) {
+  e.preventDefault(); // stop page reload
+
+  const username = form.username.value.trim() || "anon";
+  const message = form.message.value.trim();
+
+  if (!message) return;
+
+  const iframe = document.querySelector("iframe");
+
+  if (!iframe) {
+    console.error("No iframe found");
+    return;
+  }
+
+  iframe.contentWindow.postMessage(
+    {
+      type: "ASK_FUNCTION",
+      payload: {
+        username,
+        message
+      }
+    },
+    "*"
+  );
+
+  // optional UX reset
+  form.message.value = "";
+});
+
+
+</script>
+
+
+<hr style="border-color: var(--accent); margin-top:15px; margin-bottom:15px;">
+
+<p> Pages I wanna add to this thang.</p>
+
+<div
+	style="height:auto;overflow:auto;margin: 10px 5px 10px 5px;background-color: #567656;padding: 10px 10px 10px 10px;border-radius: 15px;">
+	<div style="scrollBar;">
+		<ul style="line-height: 1.75;">
+			<li>This page - subpages at the top | one-page blog, most recent entries at the top</li>
+			<li>Affirmations wheel/generator/list | fave hopecore images</li>
+			<li>Luca FAQ (identity stuff, links from other parts of the site)</li>
+			<li>More shrines? Or just rambly blog posts</li>
+			<li>MY FRANDS :] talking about them at length, linking socials, etc...</li>
+		</ul>
+	</div>
+  </div>
+  <p style="font-size: 1.1em;">Click here for my <a href="/journal/byf-dni/index.html">BYF/DNI</a>. I'll add a proper section for it eventually.</p>
+  <hr style="border-color: var(--fill); height: 10px;">
+</section>
+
+
+
+
+<footer>
+
+	<p>stentor.css by <a href="https://ribo.zone/free/layouts/" style="font-family: 'Dosis', sans-serif;">ribo.zone</a>-<a href="\vault\bibliography\index.html" style="font-family: 'Dosis', sans-serif;">full credits</a></p>
+
+</footer>
+
+</div>
+
+</main>
+
+</body>
+</html>
+
+

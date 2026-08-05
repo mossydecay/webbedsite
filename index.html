@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+
+<head><script type="text/javascript" src="/___vscode_livepreview_injected_script"></script>
+	<title> ✽⊱ Mossydecay's Burrow ⊰✽ </title>
+	<link rel="icon" type="image/x-icon" href="images/sprout.gif">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+    <link href='https://fonts.googleapis.com/css2?family=Kalam&display=swap' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css2?family=Dosis&display=swap' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css2?family=K2D&display=swap' rel='stylesheet'>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<style>
+:root {
+	--text: #deeeba;
+  --outline: #3e563e62;
+	--line: #92AD85;
+	--lighterline: #abc49f;
+	--darkerline: #79946d;
+	--accent: #8fbc8f;
+	--bg: #1F2F22;
+	--bgdarker: #1A2922;
+	--bglighter: #2d4531;
+	--fill: #3E563E;
+	--lighterfill: #567656;
+	--darkerfill: #314931;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	color: var(--text);
+	font-family: 'K2D', sans-serif;
+	margin: 0;
+	background-color: var(--bg);
+  background-image: url("images/bg29 v3.gif");
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 20rem;
+  height: 35rem;
+	margin-left: 10px;
+	margin-right: 10px;
+  background: #466046;
+  transition: 1s ease-in-out;
+	border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+	position: absolute;
+	top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+
+.card span {
+  font-weight: bold;
+  color: var(--text);
+  text-align: center;
+  display: block;
+  font-size: 1.5em;
+}
+
+.card .info {
+  font-weight: 500;
+  color: var(--text);
+  display: block;
+  text-align: center;
+  font-size: 1em;
+  margin: 0.5em;
+}
+
+.card .img {
+  width: 4.8em;
+  height: 4.8em;
+  background: var(--text);
+  border-radius: 15px;
+  margin: auto;
+}
+
+.card .share {
+  margin-top: 1em;
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+}
+
+.card a {
+  color: var(--text);
+  transition: .4s ease-in-out;
+}
+
+.card a:hover {
+  color: var(--bgdarker);
+}
+
+.card button {
+  padding: 0.8em 1.7em;
+  display: block;
+  margin: auto;
+  border-radius: 25px;
+  border: none;
+  font-weight: bold;
+  background: var(--line);
+  color: var(--bgdarker);
+  transition: .4s ease-in-out;
+}
+
+.card button:hover {
+  background: var(--bgdarker);
+  color: var(--text);
+  cursor: pointer;
+}
+
+.pocketpuyo {
+  padding: 20px;
+  background-clip: padding-box;
+  border-image-slice: 16;
+  border-image-width: 16px;
+  border-image-repeat: round;
+  border-style: solid;
+  image-rendering: pixelated;
+	border-image-source:
+		url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAQySURBVGhD7ZddahRBFEYn4mYkC3ALPoj4KLoQEXwUxIVEfBTxwS24gOByTM7YJ3z1dY2QmemHQA403V11f757q6ozubi8vPy7e8DsC/j1/uXyej9efPm5O9ZXTomB710BvNyHY3wOcUr+J8v7HXbj09fPu2evnu+fgXGvBjvsJd/TnnHnvJJZjkOx5Oly34OBnbj69n337s3r3dXt858fv/djsy6RYG93aw8tCh9tmo9vPyxP/zC+Qjs286kRhhXIAIo2sUIa57FP8Yqb+SCoxQv26sjYFpXiYbWFQCMrh0NdBMQoNH3ELmLHZXMONSTHs/szhgLclwYgkQEU30kVr0jHhBgpWvRJjO048bJY9SVDASTCiQAaduJO6nZTZNq77DZFEdz1STq2sfBhDm3tMxSQYjRUhN1tcmlTIJdzxEKAIrhrN8Nc5lYP2hyT6SFOIY7ZjS4kRWCjQC7nSGpDLMLnxHFzkTu1OJYMBWhs4BQBLR5aqEWAcyS1CAs8RObAN7XMVm0oIJODzzrZmSQFKRS7mdiey1xiDnOmDc+t4cH/lHj8MXcOTsk//BbikPi18ADxnoep9+H19fXF8ngUNHB53JO5yK1Qxzv/cIiBIgAjD1AexC1p8by7MuppLasCAEfAyWeLyerPjR3uVRdyu0NkKGDWcYN63xLEIdK/ReaziWynZroCieKB4LMg58QtnM0iv9up86/+kIlViwdqSzInotVjEy0iWa0Axtl17orHuQOcE3OSr/c6OJ8MBSAyqwYDIZwOuMRbMBOuJvX0zhgKsLs4WIjbBkc6YKAtyFwKTU25M2QogO52h+28jha2BeYC86nHlegVGgqwu7NCYMvuC8JzpbmjheIowlWSoYDsLo7ZDd6Z7wDnxHzQK20RzVAAuEQuIaT4WZAtydWgwM6/OgMYUQROFmE3thZvPgWDOlJPsjoDGFEIojMQUNzsbJwbG0Y+nxWf2wxWZ0DRFuGex9FObIlb2Hzwv5yP/1Ie6yunxBgKOLYD5+CU/KvPqAfVL5KX5LPoI/me3TWW8dMHMra2aZ/zMhSAQX6qfM6vQqNPHv6MQZcUwXjO9c8CMEd/fYDn1rD6Cvk3ALgbCDKYOIZddjS/Jg1xZ+IhcxAzteCTemAowOW2EO6OKWRWBLbOmzDBRwEpoosztuPkTi2OJUMBudx208M1Ew6KV6Rj0gJEnxmOm1s9+DgmQwEYKUQRdkO6w92lFGq3TM7lsz5JxzY3dsyhDf9kKABDhQAB7IbBUyBkR1Igl3PEJI7NUYgCxdjmwk4bC+ZKhgLEzikeCNAdghShjWKdI56JGU+BDXPZJG1678v0ENM5k5uMuQwsLTQLdY54FmGBh8BfHcYxBjgnq0OsAUm6G8x1gBSkPz4zsT2nQOn4NsMYzFmIPP6YO9ZXTolxV8Dy/gDZ7W4ADO04WQtih8oAAAAASUVORK5CYII=");
+		}
+</style>
+
+<body>
+<!--where the sidebar went-->
+
+
+<main>
+<!-- Keeps sections from getting too stretched on ultrawide monitors -->
+<div>
+<div class="center">
+<div class="card pocketpuyo">
+		<center><a href="home.html"> <img src="images/claybat.png" style="width: 7em; height: 7em; margin-bottom:-5px;"> </a></center>
+  <span><i>Welcome to the Burrow!</i></span>
+		<p class="info"><b><u>This page uses Javascript to load the layout and other elements!</u></b> Please make sure you have it <b>enabled</b> in your browser for this website to work properly. I also tried to make it as mobile-friendly as possible, but some parts may not work as intended. <br><b><u>Best viewed on desktop!</u></b></p>
+
+		<p class="info"><b><u>Content warnings:</b></u> flashing/blinking graphics, bugs, and adult language/reclaimable slurs. </p>
+				<p class="info"><b><u>Proceed at your own discretion.</b></u></p>
+
+
+  <a href="home.html" style="text-decoration: none;">
+		<button style="margin-top:10px; margin-bottom:10px;">Go forth!</button>
+	</a>
+</div>
+</div>
+</div>
+
+
+</main>
+</body>
+</html>
